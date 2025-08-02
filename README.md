@@ -16,7 +16,7 @@ Given an audio segment of 7 seconds, the objective is to determine whether the r
 
 ## 📁 Dataset
 
-- **Source**: [MLEnd London Sounds Dataset](https://mlend.org/)
+- **Source**: [MLEnd London Sounds Dataset](https://www.kaggle.com/datasets/jesusrequena/mlend-london-sounds)
 - **Total samples**: 2500 audio files (`.wav`), each 7 seconds long
 - **Attributes**:
   - `Audio`: File ID
