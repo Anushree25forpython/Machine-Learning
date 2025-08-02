@@ -31,7 +31,7 @@ Given an audio segment of 7 seconds, the objective is to determine whether the r
 
 All steps of the pipeline — from data loading and feature extraction to model training and evaluation — are executed in a single .ipynb notebook:
 
-👉 Indoor_Outdoor_Audio_Classification.ipynb
+👉 [`Indoor_Outdoor_Audio_Classification.ipynb`](Indoor_Outdoor_Audio_Classification.ipynb)
 
 ---
 
@@ -41,18 +41,18 @@ All steps of the pipeline — from data loading and feature extraction to model 
 Power
 Pitch (mean and standard deviation)
 Fraction of voiced region
-- ###📊 Binary classification (indoor = 1, outdoor = 0)
-- ###🧪 Training/Validation split (both 70:30 and 60:40 explored)
-- ###🧠 Support Vector Machine (SVM) modeling using scikit-learn
-- ###📉 Feature normalization to improve model performance
-- ###🔍 Analysis of model accuracy, overfitting, and underfitting
-- ##📌 Conclusion and Findings
+- 📊 Binary classification (indoor = 1, outdoor = 0)
+- 🧪 Training/Validation split (both 70:30 and 60:40 explored)
+- 🧠 Support Vector Machine (SVM) modeling using scikit-learn
+- 📉 Feature normalization to improve model performance
+- 🔍 Analysis of model accuracy, overfitting, and underfitting
+- 📌 Conclusion and Findings
 
 The SVM model achieved moderate accuracy:
  - Pre-normalization: ~52%–53%
- -  Post-normalization: ~67% (train) and ~57% (validation)
- -  Normalization improved training performance but slightly widened the accuracy gap between train and validation sets.
- -  Adjusting the train/validation split helped balance performance slightly.
+ - Post-normalization: ~67% (train) and ~57% (validation)
+ - ormalization improved training performance but slightly widened the accuracy gap between train and validation sets.
+ - Adjusting the train/validation split helped balance performance slightly.
 
 ---
 
