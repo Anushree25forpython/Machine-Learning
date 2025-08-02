@@ -33,7 +33,7 @@ The dataset was manually downloaded, unzipped, and loaded from Google Drive into
 
 All steps of the pipeline — from **data loading** and **feature extraction** to **model training** and **evaluation** — are executed in a single Jupyter notebook:
 
-👉 [`Indoor vs outdoor Acoustic Scene Classification using SVM.ipynb`](./ Indoor vs outdoor Acoustic Scene Classification using SVM.ipynb)
+👉 [`Indoor vs outdoor Acoustic Scene Classification using SVM.ipynb`]( ./ Indoor vs outdoor Acoustic Scene Classification using SVM.ipynb)
 
 ---
 
