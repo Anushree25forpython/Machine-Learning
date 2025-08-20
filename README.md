@@ -46,7 +46,7 @@ All steps of the pipeline — from **data loading** and **feature extraction** t
 - 📊 Binary classification: `indoor = 1`, `outdoor = 0`
 - 🧪 Training/Validation split (both **70:30**)
 - 🧠 Models - SVM using **scikit-learn**, RF and XGBoost
-- 📉 Feature normalization to improve model performance
+- 📉 Feature normalization and hyperparamater tuning to improve model performance
 - 🔍 Accuracy analysis, overfitting/underfitting diagnostics
 
 ---
@@ -54,10 +54,10 @@ All steps of the pipeline — from **data loading** and **feature extraction** t
 ## 📌 Conclusion and Findings
 
 - The **SVM model** achieved moderate accuracy:
-  - **Pre-normalization**: ~52%–53%
-  - **Post-normalization**: ~67% (train), ~57% (validation)
-- **Normalization** improved training accuracy but slightly widened the gap between train and validation sets.
-- Adjusting the train/validation split helped balance performance slightly.
+  - **Pre-normalization**: ~ ~88% (train), ~60% (validation)
+  - **Post-normalization**: ~66% (train), ~65% (validation)
+  - **Post hyperparamater tunning:  ~64% (train), ~63% (validation)
+- The SVM model achieved moderate and balanced performance after normalization and hyperparameter tuning (~64–65% accuracy), but results suggest that the current feature set (power, pitch stats, voiced fraction) is not sufficiently discriminative for indoor vs outdoor classification.
 
 ---
 
@@ -66,8 +66,8 @@ All steps of the pipeline — from **data loading** and **feature extraction** t
 While SVM with a few basic audio features yielded decent results, model performance could be significantly enhanced by:
 
 - Incorporating more **advanced features** like **MFCCs**, **spectral contrast**, or **mel spectrograms**
-- Trying more robust classifiers such as **Random Forest**, **KNN**, or **Neural Networks**
-- Expanding dataset size or using **audio augmentation techniques**
+- Trying more robust classifiers such as **Neural Networks**
+  
 
 This project demonstrates the **feasibility of environmental audio classification** using a traditional ML approach and sets the stage for more advanced audio-based scene recognition tasks.
 
@@ -80,5 +80,7 @@ This project demonstrates the **feasibility of environmental audio classificatio
 - Matplotlib, Seaborn
 - **Librosa** – Audio processing
 - **Scikit-learn** – SVM modeling
+- Random Forest classifier
+- XGBoost
 - tqdm, glob, zipfile, os
 - Google Drive – Dataset storage
