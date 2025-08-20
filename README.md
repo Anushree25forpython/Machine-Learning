@@ -44,8 +44,8 @@ All steps of the pipeline — from **data loading** and **feature extraction** t
   - Pitch (mean and standard deviation)
   - Fraction of voiced region
 - 📊 Binary classification: `indoor = 1`, `outdoor = 0`
-- 🧪 Training/Validation split (both **70:30** and **60:40** explored)
-- 🧠 SVM modeling using **scikit-learn**
+- 🧪 Training/Validation split (both **70:30**)
+- 🧠 Models - SVM using **scikit-learn**, RF and XGBoost
 - 📉 Feature normalization to improve model performance
 - 🔍 Accuracy analysis, overfitting/underfitting diagnostics
 
