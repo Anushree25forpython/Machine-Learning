@@ -53,22 +53,35 @@ All steps of the pipeline — from **data loading** and **feature extraction** t
 
 ## 📌 Conclusion and Findings
 
-- The **SVM model** achieved moderate accuracy:
-  - **Pre-normalization**: ~ ~88% (train), ~60% (validation)
-  - **Post-normalization**: ~66% (train), ~65% (validation)
-  - **Post hyperparamater tunning:  ~64% (train), ~63% (validation)
-- The SVM model achieved moderate and balanced performance after normalization and hyperparameter tuning (~64–65% accuracy), but results suggest that the current feature set (power, pitch stats, voiced fraction) is not sufficiently discriminative for indoor vs outdoor classification.
+1. SVM
+Training: 66%, Validation: 60%
+Gap is small → model generalizes reasonably, but overall accuracy is low.
+Indicates underfitting with current features — SVM is not able to extract strong discriminative boundaries.
+2. Random Forest
+Training: 70%, Validation: 61%
+Slightly higher training accuracy, but validation does not improve.
+Suggests the model learns some non-linear structure, but it still cannot capture enough useful signal.
+3. XGBoost
+Training: 67%, Validation: 61%
+Balanced training/validation, no major overfitting.
+Performance is nearly identical to RF, but with better regularization control.
+
+All three models stabilize around ~60–61% validation accuracy after proper tuning.
+Training vs validation gaps are small → models are not overfitting (good sign).
+The bottleneck is not the algorithm, but the feature set (power, pitch stats, voiced fraction) which lacks strong discriminative power for indoor vs outdoor classification.
 
 ---
 
-## ✅ Overall Conclusion
+## ✅ Overall Conclusion and way forward
 
-While SVM with a few basic audio features yielded decent results, model performance could be significantly enhanced by:
+Best performing models: Random Forest and XGBoost (≈61% validation accuracy), slightly better than SVM.
+SVM: Balanced but underfitting with limited features.
+RF & XGBoost: Handle non-linearities better, but still plateau at ~61%.
+Overall: The chosen features provide some signal but are insufficient for reliable indoor/outdoor classification.
 
 - Incorporating more **advanced features** like **MFCCs**, **spectral contrast**, or **mel spectrograms**
 - Trying more robust classifiers such as **Neural Networks**
   
-
 This project demonstrates the **feasibility of environmental audio classification** using a traditional ML approach and sets the stage for more advanced audio-based scene recognition tasks.
 
 ---
