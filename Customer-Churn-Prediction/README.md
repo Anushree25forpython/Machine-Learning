@@ -1,4 +1,4 @@
-# 📊 Customer Churn Prediction باستخدام Machine Learning
+# 📊 Customer Churn Prediction using Supervised Machine Learning
 
 ## 🚀 Project Overview
 
